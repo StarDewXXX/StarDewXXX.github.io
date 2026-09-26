@@ -9,7 +9,7 @@
 (function () {
   var l;
   try { l = localStorage.getItem('blog-lang'); } catch (e) {}
-  if (!l) l = (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+  if (!l) l = 'en';   // English by default; the switch is what opts into Chinese
   document.documentElement.setAttribute('data-lang', l);
   document.documentElement.setAttribute('lang', l === 'zh' ? 'zh-Hans' : 'en');
 })();
