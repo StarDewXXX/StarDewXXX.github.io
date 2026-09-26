@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blogs | Haotian LUO</title>
+<link rel="stylesheet" href="../assets/blog.css?v=4">
+<script>
+(function () {
+  var l;
+  try { l = localStorage.getItem('blog-lang'); } catch (e) {}
+  if (!l) l = (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.setAttribute('lang', l === 'zh' ? 'zh-Hans' : 'en');
+})();
+</script>
+<style>
+  .entry { display: block; text-decoration: none; color: inherit;
+           padding: 2rem 0; border-bottom: 1px solid var(--rule); }
+  .entry:first-of-type { border-top: 1px solid var(--rule); }
+  .entry .meta { font-family: var(--sans); font-size: .75rem; color: var(--faint);
+                 letter-spacing: .08em; text-transform: uppercase; }
+  .entry h2 { margin-top: .75rem; font-size: 1.25rem; font-family: var(--serif);
+              font-weight: 600; line-height: 1.35; }
+  .entry p { margin-top: .625rem; color: var(--muted); font-size: 1rem; }
+  .entry:hover h2 { color: var(--accent); }
+  .entry:hover .arrow { transform: translateX(4px); }
+  .arrow { display: inline-block; transition: transform .25s ease; color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav class="langswitch" aria-label="Language">
+  <button type="button" data-lang="en" aria-pressed="true">EN</button>
+  <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+</nav>
+
+<div class="wrap">
+  <div style="padding-top:2rem"><a class="back" href="../"><span lang="en">← Haotian LUO</span><span lang="zh">← Haotian LUO</span></a></div>
+</div>
+
+<header class="head">
+  <div class="wrap">
+    <div class="eyebrow">Blogs</div>
+    <h1 lang="en">Blogs about AI</h1>
+    <h1 lang="zh">AI 相关的博客</h1>
+  </div>
+</header>
+
+<div class="wrap">
+<article>
+
+  <a class="entry" href="autodatabench.html">
+    <div class="meta">AutoDataBench</div>
+    <h2 lang="en">Can agents write the data that feeds the self-improvement loop?</h2>
+    <h2 lang="zh">Agent 能写出自我改进循环所需的数据吗？</h2>
+    <p lang="en">Training data is written by experts today, and the vendors selling that work
+      run past a billion dollars a year. A model that could write it instead would close a loop
+      people have described for years. <span class="arrow">&rarr;</span></p>
+    <p lang="zh">今天的训练数据由专家写成，售卖这项服务的供应商年收入已过十亿美元。若模型能够接手，
+      一个被讨论多年的循环就此闭合。<span class="arrow">&rarr;</span></p>
+  </a>
+
+</article>
+</div>
+
+<footer class="foot">
+  <div class="wrap"><a href="../"><span lang="en">← Back to homepage</span><span lang="zh">← 返回主页</span></a></div>
+</footer>
+
+<script src="../assets/blog.js"></script>
+</body>
+</html>
